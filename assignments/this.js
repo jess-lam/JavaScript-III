@@ -53,3 +53,17 @@ sagwa.speak();
 // Principle 4
 
 // code example for Explicit Binding
+function greet (one, two, three) {
+    alert(
+        `Hello, my name is ${this.name} and I love ${one}, ${two}, and ${three}!`
+    )
+}
+
+const person = {
+    name: 'Taylor',
+    age: 21,
+}
+
+const food = ['spaghetti', 'sandwiches', 'ribs']
+
+greet.apply(person, food);
